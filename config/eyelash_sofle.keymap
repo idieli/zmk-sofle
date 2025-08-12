@@ -38,6 +38,7 @@
         caps_word: caps_word {
             compatible = "zmk,behavior-caps-word";
             label = "CAPS_WORD";
+            /delete-property/ ignore-modifiers;
             continue-list = <UNDERSCORE MINUS BACKSPACE DELETE TAB>;
         };
     };
