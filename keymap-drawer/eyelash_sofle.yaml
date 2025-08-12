@@ -149,7 +149,7 @@ layers:
   - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
   - RGB TOG
   - RGB COLOR HSB(0,0,100)
-  - RGB COLOR HSB(0,100,50)
+  - RGB BRI
   - {t: '$$mdi:transfer$$', type: trans}
   - F7
   - F8
