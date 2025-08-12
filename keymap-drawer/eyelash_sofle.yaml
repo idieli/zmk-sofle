@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: eyelash_sofle}
 layers:
-  LAYER0:
+  Base:
   - System
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
@@ -57,7 +57,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - $$mdi:keyboard-tab$$
   - $$mdi:keyboard-esc$$
-  - layer1
+  - Symbols
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:keyboard-space$$
@@ -65,7 +65,7 @@ layers:
   - $$mdi:keyboard-tab$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-right-bold$$
-  layer1:
+  Symbols:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
