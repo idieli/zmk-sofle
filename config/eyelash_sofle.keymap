@@ -38,13 +38,7 @@
         caps_word: caps_word {
             compatible = "zmk,behavior-caps-word";
             label = "CAPS_WORD";
-            # Binding modifications
-            bindings = <>;
-            /* 
-             * Normally, Caps Word ignores modifiers like Shift so it stays active.
-             * Remove Shift from ignore-modifiers so pressing Shift cancels it.
-             */
-            ignore-modifiers = <>;
+            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE TAB>;
         };
     };
 
