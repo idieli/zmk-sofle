@@ -128,8 +128,8 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:backspace-reverse-outline$$
   - PLAY PAUSE
-  - PREV
-  - NEXT
+  - $$mdi:skip-previous$$
+  - $$mdi:skip-next$$
   System:
   - {type: held}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
@@ -258,5 +258,5 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - PLAY PAUSE
-  - PREV
-  - NEXT
+  - $$mdi:skip-previous$$
+  - $$mdi:skip-next$$
