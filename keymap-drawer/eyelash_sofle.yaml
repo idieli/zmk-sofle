@@ -39,7 +39,7 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - $$mdi:apple-keyboard-caps$$
+  - $$mdi:alpha-w-box$$
   - $$mdi:apple-keyboard-control$$
   - Z
   - X
