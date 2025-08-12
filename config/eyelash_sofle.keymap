@@ -25,6 +25,11 @@
     trigger-period-ms = <16>;
 };
 
+&caps_word {
+    /delete-property/ ignore-modifiers;
+    continue-list = <UNDERSCORE MINUS BACKSPACE DELETE TAB>;
+};
+
 / {
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
@@ -35,12 +40,12 @@
     };
 
     behaviors {
-        caps_word: caps_word {
-            compatible = "zmk,behavior-caps-word";
-            label = "CAPS_WORD";
-            /delete-property/ ignore-modifiers;
-            continue-list = <UNDERSCORE MINUS BACKSPACE DELETE TAB>;
-        };
+        #caps_word: caps_word {
+        #    compatible = "zmk,behavior-caps-word";
+        #    label = "CAPS_WORD";
+        #    /delete-property/ ignore-modifiers;
+        #    continue-list = <UNDERSCORE MINUS BACKSPACE DELETE TAB>;
+        #};
     };
 
     keymap {
