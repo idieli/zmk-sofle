@@ -35,6 +35,10 @@
     };
 
     behaviors {
+        caps_word: caps_word {
+            compatible = "zmk,behavior-caps-word";
+            label = "CAPS_WORD";
+        };
     };
 
     keymap {
