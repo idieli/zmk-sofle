@@ -58,11 +58,11 @@
 
         Symbols {
             bindings = <
-&trans      &trans  &trans  &trans  &trans  &trans    &msc SCRL_UP     &trans          &trans          &trans        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-&kp DELETE  &trans  &trans  &trans  &trans  &trans    &msc SCRL_DOWN   &trans          &mkp LCLK       &mkp RCLK     &kp MINUS         &kp EQUAL          &trans
-&trans      &trans  &trans  &trans  &trans  &trans    &msc SCRL_LEFT   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW   &kp GRAVE          &trans
-&trans      &trans  &trans  &trans  &trans  &trans    &msc SCRL_RIGHT  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END           &kp BACKSLASH      &trans
-&trans      &trans  &trans  &trans  &trans  &trans    &trans           &kp ENTER       &kp DELETE      &trans        &trans            &trans
+&trans      &trans  &trans  &trans  &trans  &trans    &msc SCRL_UP     &trans          &trans          &trans            &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&kp DELETE  &trans  &trans  &trans  &trans  &trans    &msc SCRL_DOWN   &trans          &mkp LCLK       &mkp RCLK         &kp MINUS         &kp EQUAL          &trans
+&trans      &trans  &trans  &trans  &trans  &trans    &msc SCRL_LEFT   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW      &kp RIGHT_ARROW   &kp GRAVE          &trans
+&trans      &trans  &trans  &trans  &trans  &trans    &msc SCRL_RIGHT  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP       &kp END           &kp BACKSLASH      &trans
+&trans      &trans  &trans  &trans  &trans  &trans    &trans           &kp ENTER       &kp DELETE      &kp K_PLAY_PAUSE  &kp K_PREV        &kp K_NEXT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -82,11 +82,11 @@
 
         Gaming {
             bindings = <
-&kp N0      &trans          &trans  &trans  &trans            &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp ESCAPE  &kp TAB         &kp Q   &kp W   &kp E             &kp R        &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp ENTER   &kp LEFT_SHIFT  &kp A   &kp S   &kp D             &kp F        &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans          &trans  &trans  &trans            &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &kp N6          &kp N7  &kp N8  &kp LEFT_CONTROL  &kp SPACE    &trans  &trans  &trans  &trans  &trans  &trans
+&kp N0      &trans          &trans  &trans  &trans            &trans       &trans  &trans  &trans  &trans            &trans      &trans      &trans
+&kp ESCAPE  &kp TAB         &kp Q   &kp W   &kp E             &kp R        &trans  &trans  &trans  &trans            &trans      &trans      &trans
+&kp ENTER   &kp LEFT_SHIFT  &kp A   &kp S   &kp D             &kp F        &trans  &trans  &trans  &trans            &trans      &trans      &trans
+&trans      &trans          &trans  &trans  &trans            &trans       &trans  &trans  &trans  &trans            &trans      &trans      &trans
+&trans      &kp N6          &kp N7  &kp N8  &kp LEFT_CONTROL  &kp SPACE    &trans  &trans  &trans  &kp K_PLAY_PAUSE  &kp K_PREV  &kp K_NEXT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
