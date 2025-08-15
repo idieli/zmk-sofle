@@ -42,6 +42,77 @@
         };
     };
 
+    macros {
+        highlight_start: highlight_start {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp HOME>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "HIGHLIGHT_START";
+        };
+
+        highlight_end: highlight_end {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp END>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "HIGHLIGHT_END";
+        };
+
+        highlight_line: highlight_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp HOME>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp END>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT>;
+
+            label = "HIGHLIGHT_LINE";
+        };
+
+        back_word: back_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp LEFT_ARROW>,
+                <&macro_release>;
+
+            label = "BACK_WORD";
+        };
+
+        forward_word: forward_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>;
+
+            label = "FORWARD_WORD";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -61,9 +132,9 @@
             bindings = <
 &kp ESC    &trans  &trans  &trans  &trans  &trans    &msc SCRL_UP     &trans          &trans          &trans        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
 &kp ENTER  &trans  &trans  &trans  &trans  &trans    &msc SCRL_DOWN   &trans          &mkp LCLK       &mkp RCLK     &kp MINUS         &kp EQUAL          &trans
-&trans     &trans  &trans  &trans  &trans  &trans    &msc SCRL_LEFT   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW   &kp GRAVE          &trans
+&trans     &trans  &trans  &trans  &trans  &trans    &msc SCRL_LEFT   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW   &trans             &kp GRAVE
 &trans     &trans  &trans  &trans  &trans  &trans    &msc SCRL_RIGHT  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END           &kp BACKSLASH      &trans
-&trans     &trans  &trans  &trans  &trans  &trans    &trans           &kp ENTER       &kp TAB         &kp DEL       &kp C_PREV        &kp C_NEXT
+&trans     &trans  &trans  &trans  &trans  &trans    &trans           &kp ENTER       &kp TAB         &kp DEL       &trans            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -71,11 +142,11 @@
 
         Macros {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans           &trans            &trans          &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans           &trans            &trans          &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &back_word        &highlight_line  &trans            &forward_word   &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &highlight_start  &trans           &trans            &highlight_end  &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans           &kp C_PLAY_PAUSE  &kp C_PREV      &kp C_NEXT
             >;
         };
 
