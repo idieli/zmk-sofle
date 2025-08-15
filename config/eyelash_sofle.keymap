@@ -46,11 +46,10 @@
         highlight_start: highlight_start {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &macro_press &kp LEFT_SHIFT
-                &kp HOME
-                &macro_release &kp LEFT_SHIFT
-            >;
+            bindings =
+                <&macro_press &kp LEFT_SHIFT>,
+                <&macro_tap &kp HOME>,
+                <&macro_release &kp LEFT_SHIFT>;
 
             label = "HIGHLIGHT_START";
         };
@@ -58,11 +57,10 @@
         highlight_end: highlight_end {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &macro_press &kp LEFT_SHIFT
-                &kp END
-                &macro_release &kp LEFT_SHIFT
-            >;
+            bindings =
+                <&macro_press &kp LEFT_SHIFT>,
+                <&macro_tap &kp END>,
+                <&macro_release &kp LEFT_SHIFT>;
 
             label = "HIGHLIGHT_END";
         };
@@ -70,23 +68,22 @@
         highlight_line: highlight_line {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &kp HOME
-                &macro_press &kp LEFT_SHIFT
-                &kp END
-                &macro_release &kp LEFT_SHIFT
-            >;
+            bindings =
+                <&macro_tap &kp HOME>,
+                <&macro_press &kp LEFT_SHIFT>,
+                <&macro_tap &kp END>,
+                <&macro_release &kp LEFT_SHIFT>;
+
             label = "HIGHLIGHT_LINE";
         };
 
         back_word: back_word {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &macro_press &kp LEFT_CONTROL
-                &kp LEFT_ARROW
-                &macro_release &kp LEFT_CONTROL
-            >;
+            bindings =
+                <&macro_press &kp LEFT_CONTROL>,
+                <&macro_tap &kp LEFT_ARROW>,
+                <&macro_release &kp LEFT_CONTROL>;
 
             label = "BACK_WORD";
         };
@@ -94,11 +91,10 @@
         forward_word: forward_word {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &macro_press &kp LEFT_CONTROL
-                &kp RIGHT_ARROW
-                &macro_release &kp LEFT_CONTROL
-            >;
+            bindings =
+                <&macro_press &kp LEFT_CONTROL>,
+                <&macro_tap &kp RIGHT_ARROW>,
+                <&macro_release &kp LEFT_CONTROL>;
 
             label = "FORWARD_WORD";
         };
